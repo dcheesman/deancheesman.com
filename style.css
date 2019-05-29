@@ -27,3 +27,29 @@ canvas {
   top : 0px;
   z-index: -1000;
 }
+
+#header strong {
+  font-size: 1.33em;
+  letter-spacing: 3.14px;
+  color: black;
+}
+
+#header-menu {
+  list-style: none;
+  margin-bottom: 33px;
+}
+
+#header-menu li {
+  font-size: 0.666em;
+  display: inline;
+  list-style-type: none;
+  padding-right: 31px;
+}
+
+#footer {
+  position: absolute;
+  bottom: 11px;
+  font-size: 0.56em;
+  color: #aaaaaa;
+  text-align: right;
+}
