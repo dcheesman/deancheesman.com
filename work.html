@@ -8,30 +8,41 @@
   crossorigin="anonymous"></script>
 
 
-  <title>Support my consumtion</title>
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-  <!-- insert header -->
+  <title>Dean's Projects</title>
   <script>
-    $(function(){
+    $(document).ready(function(){
+      $("head").append($("<link rel='stylesheet' href='style.css' type='text/css' media='screen' />"));
       $("#header").load("header.html");
-    });
-  </script>
-  <div id="header"></div>
-
-  <!-- page body -->
-  <p>
-    The fact that there's anything here is a small miracle
-  </p>
-
-  <!-- insert footer -->
-  <script>
-    $(function(){
       $("#footer").load("footer.html");
     });
   </script>
+</head>
+<body>
+  <!-- insert header -->
+  <div id="header"></div>
+
+  <!-- page body -->
+  <div id="project-grid">
+    <div class="project" onClick="window.open('fightnight.html')">
+      <h3>
+        X4 Fight Night 2019 Live Visuals
+      </h3>
+      <div class="thumbnail">
+        <img src="imgs/FightNight/FightNightThumb.png">
+      </div>
+    </div>
+
+    <div class="project" onClick="window.open('provolights.html')">
+      <h3>
+        Provo Lights
+      </h3>
+      <div class="thumbnail">
+        <img src="imgs/ProvoLightsThumbnail.png">
+      </div>
+    </div>
+  </div>
+
+  <!-- insert footer -->
   <div id="footer"></div>
 
 

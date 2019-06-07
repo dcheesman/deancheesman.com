@@ -6,18 +6,23 @@
 body {
   /*background-color: rgb(64, 57, 54);*/
   background-color: rgb(255, 255, 255);
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 1.5em;
+  font-weight: 300;
   max-width: 50%;
   margin: 50px auto 50px auto;
 }
 
 p {
+  margin: 16px 0px 32px 0px;
   padding: 10px 0px 10px 0px;
+  font-size: 0.75em;
+  letter-spacing: 0.5px;
+  line-height: 1.5;
 }
 
 a {
-  color: blue;
+  color: #21cfd2;
   text-decoration: none;
 }
 
@@ -28,8 +33,14 @@ canvas {
   z-index: -1000;
 }
 
+h3 {
+  font-size: 0.75em;
+  font-weight: 300;
+}
+
 #header strong {
   font-size: 1.33em;
+  font-weight: 400;
   letter-spacing: 3.14px;
   color: black;
 }
@@ -47,9 +58,31 @@ canvas {
 }
 
 #footer {
-  position: absolute;
-  bottom: 11px;
+  margin-top: 32px;
+  position: sticky;
+  bottom: 24px;
   font-size: 0.56em;
   color: #aaaaaa;
-  text-align: right;
+}
+
+.project {
+  width: 640px;
+  margin: 16px auto 64px auto;
+}
+
+.thumbnail img{
+  width: 80%;
+  margin-top: 8px;
+}
+
+.youtube {
+  margin: 16px auto 16px auto;
+}
+
+.photo {
+  margin: 16px auto 16px auto;
+}
+
+.photo img{
+  width: 640px;
 }

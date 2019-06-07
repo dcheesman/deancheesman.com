@@ -3,14 +3,19 @@ var maxForce = 5;
 
 
 var maxDots = 200;
+var maxPolys = 42;
 
 var dots = [];
+var polys = [];
 
 function setup () {
   var myCanvas = createCanvas(windowWidth, windowHeight);
 
   for (var i = 0 ; i< maxDots; i++){
     newDot();
+  }
+  for (var i = 0 ; i< maxPolys; i++){
+    newPoly();
   }
 }
 
@@ -24,17 +29,29 @@ function draw () {
   for (var i = dots.length - 1; i >= 0; i--) {
     dots[i].process();
 
-    if(dots[i].r < 1){
-      if( random(100) > 98 ){
-        dots.splice(i, 1);
-      }
-    }
+    // if(dots[i].r < 1){
+    //   if( random(100) > 98 ){
+    //     dots.splice(i, 1);
+    //   }
+    // }
+  }
+
+  for (var i = polys.length - 1; i >= 0; i--) {
+    polys[i].process();
   }
 }
 
 function newDot() {
   var newDot = new Dot();
   dots.push(newDot);
+}
+
+function newPoly() {
+  var dot1 = Math.floor(Math.random() * maxDots);
+  var dot2 = Math.floor(Math.random() * maxDots);
+  var dot3 = Math.floor(Math.random() * maxDots);
+  var newPoly = new Poly(dot1, dot2, dot3);
+  polys.push(newPoly);
 }
 
 function Dot( new_x  , new_y ) {
@@ -81,4 +98,32 @@ Dot.prototype.process = function (){
 
   ellipse(this.x, this.y, this.r, this.r);
 
+};
+
+function Poly( dot_1, dot_2, dot_3) {
+  this.dot1 = dot_1;
+  this.dot2 = dot_2;
+  this.dot3 = dot_3;
+}
+
+Poly.prototype.process = function() {
+  var dot1 = dots[this.dot1];
+  var dot2 = dots[this.dot2];
+  var dot3 = dots[this.dot3];
+
+  var d1 = dist( dot1.x, dot1.y, dot2.x, dot2.y);
+  var d2 = dist( dot2.x, dot2.y, dot3.x, dot3.y);
+  var d3 = dist( dot3.x, dot3.y, dot1.x, dot1.y);
+
+  var da = (d1 + d2 + d3)/3;
+
+  var a = map(d1, 0, dRange, 200, 0);
+
+  fill( 110 , a );
+
+  beginShape();
+  vertex(dot1.x, dot1.y);
+  vertex(dot2.x, dot2.y);
+  vertex(dot3.x, dot3.y);
+  endShape(CLOSE);
 };
