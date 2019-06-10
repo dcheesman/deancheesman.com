@@ -117,7 +117,7 @@ Poly.prototype.process = function() {
 
   var da = (d1 + d2 + d3)/3;
 
-  var a = map(d1, 0, dRange, 200, 0);
+  var a = map(d1, 0, dRange/3, 255, 0);
 
   fill( 110 , a );
 
