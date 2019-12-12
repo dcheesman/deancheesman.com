@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NT97LNT');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- import jquery -->
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+
+  <title>VerticalOps Globe</title>
+  <script>
+    $(function(){
+      $("#style").load("style.html");
+    });
+  </script>
+  <div id="style"></div>
+</head>
+<body>
+  <!-- insert header -->
+  <script>
+    $(function(){
+      $("#header").load("header.html");
+    });
+  </script>
+  <div id="header"></div>
+
+  <!-- page body -->
+  <div class="youtube">
+    <iframe width="640" height="360" src="https://www.youtube.com/embed/KkJXX7joAEQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <p>
+    In late 2017 I was contracted to build a web-based 3D interactive visualization for VerticalOps showing the business they managed around the globe in real time.
+  </p>
+  <p>
+    I built a similar globe visualzation while at InsideSales.com. That project was not browser-based and was built using Processing. VerticalOps wanted something similar, but that could run on the web. So even though the look and feel of the visualization is similar, building this project was very different than the first globe I made and required a different tool set.
+  </p>
+  <p>
+    3D elements were built using Three.js. 2D charts and graphs built with D3.js and p5.js. THe logo animation was built using After Effects and rendered using Lottie. 3D textures were designed and created using Photoshop and Illustrator.
+  </p>
+
+  <p>Detail Images</p>
+  <div class="photo">
+    <img src="imgs/Globe/Full UI.png">
+  </div>
+  <div class="photo">
+    <img src="imgs/Globe/Callout.png">
+  </div>
+  <div class="photo">
+    <img src="imgs/Globe/USA Detail.png">
+  </div>
+  <div class="photo">
+    <img src="imgs/Globe/Europe Detail.png">
+  </div>
+  <br><br>
+  <p>Re-teaching myself all the math
+    <div class="photo">
+      <img src="imgs/Globe/Globe Math Sketches.JPG">
+    </div>
+  </p>
+  <br><br>
+  <p>Pressure testing the arc drawing</p>
+  <div class="photo">
+    <img src="imgs/Globe/Pressure Test.png">
+  </div>
+  
+
+
+
+  <!-- insert footer -->
+  <script>
+    $(function(){
+      $("#footer").load("footer.html");
+    });
+  </script>
+  <div id="footer"></div>
+
+
+</body>
+</html>
