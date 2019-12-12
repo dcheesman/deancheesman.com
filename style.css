@@ -84,6 +84,11 @@ h3 {
   margin: 16px auto 16px auto;
 }
 
+.profile {
+  margin: 16px auto 16px auto;
+  text-align: center;
+}
+
 .photo img{
   width: 640px;
 }
